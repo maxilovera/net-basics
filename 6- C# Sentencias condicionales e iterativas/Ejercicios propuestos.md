@@ -4,7 +4,7 @@
 Pedir dos números al usuario por teclado y decir que número es el mayor.
 
 ## Ejercicio 2.
-Pedir el nombre de la semana al usuario y decirle si es fin de semana o no.  En caso de error, indicarlo.
+Pedir el número del día al usuario (1 a 7) y decirle si es fin de semana o no. En caso de error, indicarlo.
 
 ## Ejercicio 3.
 Pedir al usuario el precio de un producto (valor positivo) y la forma de pagar (efectivo o tarjeta booleano) si la forma de pago es mediante tarjeta, sumarle 10% al valor de un producto. Imprima el costo total. 
