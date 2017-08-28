@@ -50,6 +50,10 @@ Leer 3 notas de un alumno y hacer el promedio. Indicar el rango en el que se enc
 - 4.1 a 6: Regular
 - 6.1 a 10: Aprobado 
 
+<br>
+<hr>
+<br>
+
 # Ejercicios propuestos Sentencias Iterativas
 
 ## Ejercicio 11.
@@ -59,7 +63,7 @@ En base a las sentencias presentadas responda las siguientes preguntas para cada
 2) ¿Cuál es el valor final de z?.
 
 ### Ejemplo 1
-![Screenshot](assets/imagen1.png)
+<img src="https://github.com/maxilovera/net-basics/blob/master/6-%20C%23%20Sentencias%20condicionales%20e%20iterativas/assets/Imagen1.png"/>
 
 Rta 1:
 Rta 2:
