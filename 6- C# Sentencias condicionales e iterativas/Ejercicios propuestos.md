@@ -69,25 +69,99 @@ Rta 1:
 Rta 2:
 
 ### Ejemplo 2
-![Screenshot](assets/imagen2.png)
+<img src="https://github.com/maxilovera/net-basics/blob/master/6-%20C%23%20Sentencias%20condicionales%20e%20iterativas/assets/Imagen2.png"/>
 
 Rta 1:
 Rta 2:
 
 ### Ejemplo 3
-![Screenshot](assets/imagen3.png)
+<img src="https://github.com/maxilovera/net-basics/blob/master/6-%20C%23%20Sentencias%20condicionales%20e%20iterativas/assets/Imagen3.png"/>
 
 Rta 1:
 Rta 2:
 
 ### Ejemplo 4
-![Screenshot](assets/imagen4.png)
+<img src="https://github.com/maxilovera/net-basics/blob/master/6-%20C%23%20Sentencias%20condicionales%20e%20iterativas/assets/Imagen4.png"/>
 
 Rta 1:
 Rta 2:
 
 ### Ejemplo 5
-![Screenshot](assets/imagen5.png)
+<img src="https://github.com/maxilovera/net-basics/blob/master/6-%20C%23%20Sentencias%20condicionales%20e%20iterativas/assets/Imagen5.png"/>
 
 Rta 1:
 Rta 2:
+
+## Ejercicio 12
+Recorre los números del 1 al 100. Usa un bucle for. 
+Recorre los números del 1 al 100. Usa un bucle while.
+
+## Ejercicio 13
+Mostrar los nùmeros impares entre el 0 y el 100
+
+## Ejercicio 14
+Ingrese por teclado un número positivo. Mostrar los números del 1 hasta el número ingresado.
+
+## Ejercicio 15
+Ingresar un número por teclado y obtener el factorial del mismo.
+
+## Ejercicio 16
+Ingresar 10 números por teclado e imprima el mayor y el menor.
+
+## Ejercicio 17
+El usuario tiene productos pesados por KG, y necesita una calculadora que le permita pasar ese valor a su equivalente en otra unidad de medida.
+
+Ingrese KG del producto. Muestre en pantalla las opciones de conversión (1- Hectogramos, 2- Decagramos, 3- Gramos, 4- Decigramos, 5- Centigramos, 6- Miligramos, 99- Salir)
+
+El programa debe imprimir en pantalla el valor del equivalente ingresado, con el formato (“x KG equivale a y z) donde x es el valor ingresado por el usuario, y es el valor equivalente calculado, y z es el nombre de la opción elegida.
+
+El programa debe funcionar mientras el usuario ingrese un valor distinto a 99.
+
+## Ejercicio 18
+Calcule el sueldo que le corresponde al trabajador de una empresa, ingrese el sueldo bruto por teclado. El programa debe realizar los cálculos en función de los siguientes criterios:
+
+A) Si lleva más de 10 años en la empresa se le aplica un aumento del 10%.
+B) Si lleva menos de 10 años pero más que 5 se le aplica un aumento del 7%.
+C) Si lleva menos de 5 años pero más que 3 se le aplica un aumento del 5%.
+D) Si lleva menos de 3 años se le aplica un aumento del 3%.
+
+El programa debe funcionar hasta que se ingrese un 0, como sueldo bruto por teclado.
+
+## Ejercicio 19
+El gobierno ha implementado como parte de su programa social, un subsidio familiar bajo la siguiente reglamentación:
+
+a) Las familias que tienen hasta 2 hijos, reciben $70.00, las que tienen hasta 3 y 5 reciben $90.00 y las que tienen 6 o más reciben $120 mensual.
+b) Por cada hijo en edad escolar reciben $10.00 adicionales. Se considera la edad escolar entre 6 y 18 años.
+c) Si la madre de familia fuera viuda, la familia recibe S/. 20.00 adicionales.
+
+Ingrese todos los datos por teclado, al finalizar la carga obtener el resultaado, mostrarlo en pantalla y mostrar un mensaje de "continuar o salir" para volver al inicio o salir.
+
+## Ejercicio 20.
+Cree una variable con un número aleatorio del 1 al 20. Luego permita ingresar hasta 5 números por teclado. Cada vez que se ingrese un número comparar con el valor aleatorio y validar si acertó. Mostrar en pantalla.
+
+## Ejercicio 21
+Ingrese 2 números por pantalla, obtenga la tabla de multiplicar de primer número, hasta el segundo.
+
+Ejemplo: N1: 5, N2: 12
+Obtener 5x1, 5x2, 5x3, 5x4, 5x5, 5x6, 5x7, 5x8, 5x9, 5x10, 5x11, 5x12.
+
+## Ejercicio 22
+Realizar un programa que permita ingresar n números enteros por el teclado y se desea conocer:
+             a) La cantidad de números positivos.
+             b) La cantidad de números negativos.
+             c) La cantidad de números pares.
+             d)La cantidad de números impares 
+			 
+La carga termina cuando se ingresa el número 0.
+
+## Ejercicio 23
+Crea un "calculador de cuadrados": pedirá al usuario un número y mostrará su cuadrado. Se repetirá mientras el número introducido no sea cero. Usar WHILE.
+
+## Ejercicio 24
+Crea un programa que pida de forma repetitiva pares de números al usuario. Tras introducir cada par de números, responderá si el primero es múltiplo del segundo.
+La carga termina cuando los dos números sean 0. Usar WHILE.
+
+## Ejercicio 25
+Crea un programa que calcule cuantas cifras tiene un número entero positivo ingresado por teclado (pista: se puede hacer dividiendo varias veces entre 10).
+
+
