@@ -19,7 +19,7 @@ El usuario debe especificar la operación con el primer carácter del primer par
 - D o d para la división. 
 
 ## Ejercicio 5. (USAR SWITCH)
-Genere un numero aleatorio entre 1 y 7 con la clase Random. Cree un enumerador con los días de la semana, use el enumerador en el switch e imprima un texto que indique que el dia (número aleatorio generado) es laborable o no. Lunes a viernes son días laborales, sábado y domingo no.
+Ingrese una fecha cualquiera por teclado. Use el enumerador DayOfWeek para determinar si el día fue o será laborable o no. Lunes a viernes son días laborales, sábado y domingo no.
 
 ## Ejercicio 6
 Ingresar un número e indicar si es positivo o negativo, luego indicar si es par o impar.
