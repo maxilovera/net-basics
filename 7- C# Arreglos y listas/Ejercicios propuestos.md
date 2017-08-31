@@ -1,7 +1,7 @@
 # Ejercicios propuestos Arreglos
 
 ## Ejercicio 1 
-Ingrese una frase por teclado. Imprima la misma frase pero intercalando mayúsculas y minúsculas.
+Ingrese una frase por teclado. Imprima la misma frase pero convirtiendo los caracteres en mayúscula en minúscula y viceversa.
 
 ## Ejercicio 2
 Hacer el algoritmo que imprima el mayor y el menor de una serie de 25 números que vamos introduciendo por teclado.
