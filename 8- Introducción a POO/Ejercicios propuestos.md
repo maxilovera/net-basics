@@ -12,7 +12,7 @@ De la siguiente lista, identifique cada elemento como objeto, propiedad o compor
 <li>Canal</li>
 <li>Brillo</li>
 <li>Apagar</li>
-<ul>
+</ul>
 
 ## Ejercicio 2
 En base al siguiente enunciado, identifique objetos y propiedades presentes:
