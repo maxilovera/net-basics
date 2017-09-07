@@ -72,6 +72,10 @@ y los siguientes métodos:
 	PrepararExpresso
 	NotificarFaltante
 
+<div style="color:red">### Actualización: 7/9 </div>
+## Ejercicio 3.
+Cree las clases y métodos que surgen de los ejercicios del tema 8. <a target="_blank" href="https://github.com/maxilovera/net-basics/blob/master/8-%20Introducci%C3%B3n%20a%20POO/Ejercicios%20propuestos.md">Acceder</a>
+	
 ## Ejercicio Integrador (importante realizarlo en su totalidad)
 
 Dada la necesidad de informatizar la administración del ZOO de una importante ciudad, se necesita modelar las clases necesarias para contemplar el manejo de aves, mamíferos y reptiles. 
