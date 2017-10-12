@@ -8,7 +8,7 @@ A continuación un ejemplo de la interfaz.
 <img src="https://github.com/maxilovera/net-basics/blob/master/12- Introduccion a Winforms/assets/Imagen1.png"/>
 
 ### Función Fibonacci.
-<code>
+<blockquote>
 public long Fibonacci(long numero)
 {
 	if (numero <= 1)
@@ -20,11 +20,11 @@ public long Fibonacci(long numero)
 		return Fibonacci(numero - 1) + Fibonacci(numero - 2);
 	}
 }
-</code>
+</blockquote>
 
 ### Función Factorial.
 
-<code>
+<blockquote>
 public long Factorial(long numero)
 {
 	if (numero == 0)
@@ -36,4 +36,4 @@ public long Factorial(long numero)
 		return Factorial(numero - 1) * numero;
 	}
 }
-</code>
+</blockquote>
