@@ -30,13 +30,14 @@
         {
             this.comboClientes = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.gridFacturas = new System.Windows.Forms.DataGridView();
             this.gridFacturas2 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modificar = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewLinkColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.gridFacturas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridFacturas2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,38 +60,39 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Filtro de cliente";
             // 
-            // gridFacturas
-            // 
-            this.gridFacturas.AllowUserToAddRows = false;
-            this.gridFacturas.AllowUserToDeleteRows = false;
-            this.gridFacturas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridFacturas.Location = new System.Drawing.Point(13, 70);
-            this.gridFacturas.Name = "gridFacturas";
-            this.gridFacturas.ReadOnly = true;
-            this.gridFacturas.Size = new System.Drawing.Size(411, 213);
-            this.gridFacturas.TabIndex = 2;
-            // 
             // gridFacturas2
             // 
             this.gridFacturas2.AllowUserToAddRows = false;
             this.gridFacturas2.AllowUserToDeleteRows = false;
-            this.gridFacturas2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gridFacturas2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridFacturas2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridFacturas2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Fecha,
+            this.Monto,
+            this.Cliente,
             this.Modificar,
             this.Eliminar});
-            this.gridFacturas2.Location = new System.Drawing.Point(12, 302);
+            this.gridFacturas2.Location = new System.Drawing.Point(12, 69);
             this.gridFacturas2.Name = "gridFacturas2";
             this.gridFacturas2.ReadOnly = true;
-            this.gridFacturas2.Size = new System.Drawing.Size(412, 196);
+            this.gridFacturas2.Size = new System.Drawing.Size(651, 231);
             this.gridFacturas2.TabIndex = 3;
             this.gridFacturas2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridFacturas2_CellClick);
             this.gridFacturas2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridFacturas2_CellContentClick);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(559, 42);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Nueva factura";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Codigo
             // 
@@ -106,9 +108,23 @@
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
             // 
+            // Monto
+            // 
+            this.Monto.DataPropertyName = "Monto";
+            this.Monto.HeaderText = "Monto";
+            this.Monto.Name = "Monto";
+            this.Monto.ReadOnly = true;
+            // 
+            // Cliente
+            // 
+            this.Cliente.DataPropertyName = "CodigoCliente";
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            this.Cliente.ReadOnly = true;
+            // 
             // Modificar
             // 
-            this.Modificar.HeaderText = "Modificar";
+            this.Modificar.HeaderText = "";
             this.Modificar.Name = "Modificar";
             this.Modificar.ReadOnly = true;
             this.Modificar.Text = "Modificar";
@@ -117,26 +133,25 @@
             // Eliminar
             // 
             this.Eliminar.DataPropertyName = "(ninguno)";
-            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.HeaderText = "";
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;
             this.Eliminar.Text = "Eliminar";
             this.Eliminar.UseColumnTextForLinkValue = true;
             // 
-            // Form1
+            // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 508);
+            this.ClientSize = new System.Drawing.Size(676, 312);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.gridFacturas2);
-            this.Controls.Add(this.gridFacturas);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboClientes);
-            this.Name = "Form1";
+            this.Name = "Principal";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridFacturas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridFacturas2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -147,10 +162,12 @@
 
         private System.Windows.Forms.ComboBox comboClientes;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView gridFacturas;
         private System.Windows.Forms.DataGridView gridFacturas2;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewLinkColumn Modificar;
         private System.Windows.Forms.DataGridViewLinkColumn Eliminar;
     }

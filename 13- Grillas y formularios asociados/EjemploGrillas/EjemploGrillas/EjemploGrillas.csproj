@@ -52,6 +52,7 @@
       <DependentUpon>CargaFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IActualizacionFactura.cs" />
+    <Compile Include="Interfaces\IObtenerDatos.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>

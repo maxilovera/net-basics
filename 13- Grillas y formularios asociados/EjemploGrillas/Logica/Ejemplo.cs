@@ -12,6 +12,12 @@ namespace Logica
         public DateTime Fecha { get; set; }
         public double Monto { get; set; }
         public int CodigoCliente { get; set; }
+        public DateTime FechaBaja { get; set; }
+
+        public Factura()
+        {
+            this.Fecha = DateTime.Now;
+        }
     }
 
     public class Cliente
@@ -67,7 +73,14 @@ namespace Logica
         /// <returns></returns>
         public List<Factura> ObtenerFacturas(int codigoCliente)
         {
-            return codigoCliente == 0 ? this.facturas : this.facturas.Where(x=>x.CodigoCliente == codigoCliente).ToList();
+            return codigoCliente == 0 ? 
+                   this.facturas.Where(x=>x.FechaBaja == DateTime.MinValue).ToList() : //Todas sin las eliminadas
+                   this.facturas.Where(x=> x.FechaBaja == DateTime.MinValue && x.CodigoCliente == codigoCliente).ToList(); //Filtradas sin las eliminadas
+        }
+
+        public Factura ObtenerFacturaPorCodigo(int codigo)
+        {
+            return this.facturas.Where(x => x.FechaBaja == DateTime.MinValue && x.Codigo == codigo).FirstOrDefault();
         }
 
         /// <summary>
@@ -77,8 +90,18 @@ namespace Logica
         /// <returns></returns>
         public bool GuardarFactura(Factura factura)
         {
-            if (factura.Codigo == 0)
+            if (factura.FechaBaja != DateTime.MinValue)
+            {                
+                var facturasSinLaActualizada = this.facturas.Where(x => x.Codigo != factura.Codigo).ToList();
+
+                facturasSinLaActualizada.Add(factura);
+
+                this.facturas = facturasSinLaActualizada;
+            }
+            else if (factura.Codigo == 0)
             {
+                factura.Codigo = this.facturas.Count + 1;
+
                 this.facturas.Add(factura);
             }
             else

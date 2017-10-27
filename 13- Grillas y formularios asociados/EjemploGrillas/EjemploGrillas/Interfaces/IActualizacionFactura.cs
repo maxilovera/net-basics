@@ -9,6 +9,10 @@ namespace EjemploGrillas.Interfaces
 {
     public interface IActualizacionFactura
     {
-        Factura ObtenerFacturaPorCodigo(int codigo);
+        /// <summary>
+        /// Este metodo actualiza la factura y luego recarga la grilla.
+        /// </summary>
+        /// <param name="factura"></param>
+        void GuardarFactura(Factura factura);        
     }
 }
