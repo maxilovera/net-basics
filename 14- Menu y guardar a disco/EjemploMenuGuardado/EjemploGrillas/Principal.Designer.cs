@@ -117,7 +117,7 @@
             // 
             // Cliente
             // 
-            this.Cliente.DataPropertyName = "CodigoCliente";
+            this.Cliente.DataPropertyName = "Cliente";
             this.Cliente.HeaderText = "Cliente";
             this.Cliente.Name = "Cliente";
             this.Cliente.ReadOnly = true;

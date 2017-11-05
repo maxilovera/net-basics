@@ -31,7 +31,7 @@ namespace EjemploGrillas
         private void CargaFactura_Load(object sender, EventArgs e)
         {
             txtCodigoFactura.Text = this.facturaSeleccionada.Codigo.ToString();
-            comboClientes.SelectedValue = this.facturaSeleccionada.CodigoCliente;
+            comboClientes.SelectedValue = this.facturaSeleccionada.Cliente.Codigo;
             dtpFechaFactura.Text = this.facturaSeleccionada.Fecha.ToString();
             txtMonto.Text = this.facturaSeleccionada.Monto.ToString();
 
@@ -53,7 +53,7 @@ namespace EjemploGrillas
         private void button1_Click(object sender, EventArgs e)
         {
             //Pongo en las propiedades de factura seleccionada, los valores cargados por el usuario.
-            this.facturaSeleccionada.CodigoCliente = ((Cliente)comboClientes.SelectedItem).Codigo;
+            this.facturaSeleccionada.Cliente.Codigo = ((Cliente)comboClientes.SelectedItem).Codigo;
             this.facturaSeleccionada.Fecha = DateTime.Parse(dtpFechaFactura.Text);
             this.facturaSeleccionada.Monto = double.Parse(txtMonto.Text);
 

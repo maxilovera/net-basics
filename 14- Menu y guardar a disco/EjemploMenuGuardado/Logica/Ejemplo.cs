@@ -11,7 +11,7 @@ namespace Logica
         public int Codigo { get; set; }
         public DateTime Fecha { get; set; }
         public double Monto { get; set; }
-        public int CodigoCliente { get; set; }
+        public Cliente Cliente { get; set; }
         public DateTime FechaBaja { get; set; }
 
         public Factura()
@@ -22,6 +22,11 @@ namespace Logica
 
     public class Cliente
     {
+        public override string ToString()
+        {
+            return string.Format("{0} - {1}", this.Codigo.ToString(), this.Nombre);
+        }
+
         public int Codigo { get; set; }
         public string Nombre { get; set; }
     }
@@ -42,20 +47,20 @@ namespace Logica
             this.clientes.Add(new Cliente() { Codigo = 3, Nombre = "Juan" });
             this.clientes.Add(new Cliente() { Codigo = 4, Nombre = "Pedro" });
 
-            this.facturas.Add(new Factura() { Codigo = 1, CodigoCliente = 1, Fecha = DateTime.Now.AddDays(-4), Monto = 1000 });
-            this.facturas.Add(new Factura() { Codigo = 2, CodigoCliente = 1, Fecha = DateTime.Now.AddDays(-14), Monto =2000 });
-            this.facturas.Add(new Factura() { Codigo = 3, CodigoCliente = 2, Fecha = DateTime.Now.AddDays(-24), Monto = 3000 });
-            this.facturas.Add(new Factura() { Codigo = 4, CodigoCliente = 3, Fecha = DateTime.Now.AddDays(-34), Monto = 5000 });
-            this.facturas.Add(new Factura() { Codigo = 5, CodigoCliente = 4, Fecha = DateTime.Now.AddDays(-15), Monto = 6500 });
-            this.facturas.Add(new Factura() { Codigo = 6, CodigoCliente = 2, Fecha = DateTime.Now.AddDays(-12), Monto =74000 });
-            this.facturas.Add(new Factura() { Codigo = 7, CodigoCliente = 3, Fecha = DateTime.Now.AddDays(-10), Monto = 1200 });
-            this.facturas.Add(new Factura() { Codigo = 8, CodigoCliente = 1, Fecha = DateTime.Now.AddDays(-8), Monto = 5400 });
-            this.facturas.Add(new Factura() { Codigo = 9, CodigoCliente = 1, Fecha = DateTime.Now.AddDays(-6), Monto = 1020 });
-            this.facturas.Add(new Factura() { Codigo = 10, CodigoCliente =2, Fecha = DateTime.Now.AddDays(-4), Monto = 1700 });
-            this.facturas.Add(new Factura() { Codigo = 11, CodigoCliente = 1, Fecha = DateTime.Now.AddDays(-1), Monto = 1800 });
-            this.facturas.Add(new Factura() { Codigo = 12, CodigoCliente = 4, Fecha = DateTime.Now.AddDays(-29), Monto = 1090 });
-            this.facturas.Add(new Factura() { Codigo = 13, CodigoCliente = 3, Fecha = DateTime.Now.AddDays(-64), Monto = 3980 });
-            this.facturas.Add(new Factura() { Codigo = 14, CodigoCliente = 2, Fecha = DateTime.Now.AddDays(-184), Monto = 8000 });
+            this.facturas.Add(new Factura() { Codigo = 1, Cliente = new Cliente() { Codigo = 1, Nombre = "1" }, Fecha = DateTime.Now.AddDays(-4), Monto = 1000 });
+            this.facturas.Add(new Factura() { Codigo = 2, Cliente = new Cliente() { Codigo = 1, Nombre = "1" }, Fecha = DateTime.Now.AddDays(-14), Monto =2000 });
+            this.facturas.Add(new Factura() { Codigo = 3, Cliente = new Cliente() { Codigo = 2, Nombre = "2" }, Fecha = DateTime.Now.AddDays(-24), Monto = 3000 });
+            this.facturas.Add(new Factura() { Codigo = 4, Cliente = new Cliente() { Codigo = 3, Nombre = "3" }, Fecha = DateTime.Now.AddDays(-34), Monto = 5000 });
+            this.facturas.Add(new Factura() { Codigo = 5, Cliente = new Cliente() { Codigo = 4, Nombre = "4" }, Fecha = DateTime.Now.AddDays(-15), Monto = 6500 });
+            this.facturas.Add(new Factura() { Codigo = 6, Cliente = new Cliente() { Codigo = 2, Nombre = "2" }, Fecha = DateTime.Now.AddDays(-12), Monto =74000 });
+            this.facturas.Add(new Factura() { Codigo = 7, Cliente = new Cliente() { Codigo = 3, Nombre = "3" }, Fecha = DateTime.Now.AddDays(-10), Monto = 1200 });
+            this.facturas.Add(new Factura() { Codigo = 8, Cliente = new Cliente() { Codigo = 1, Nombre = "1" }, Fecha = DateTime.Now.AddDays(-8), Monto = 5400 });
+            this.facturas.Add(new Factura() { Codigo = 9, Cliente = new Cliente() { Codigo = 1, Nombre = "1" }, Fecha = DateTime.Now.AddDays(-6), Monto = 1020 });
+            this.facturas.Add(new Factura() { Codigo = 10, Cliente = new Cliente() { Codigo = 2, Nombre = "2" }, Fecha = DateTime.Now.AddDays(-4), Monto = 1700 });
+            this.facturas.Add(new Factura() { Codigo = 11, Cliente = new Cliente() { Codigo = 1, Nombre = "1" }, Fecha = DateTime.Now.AddDays(-1), Monto = 1800 });
+            this.facturas.Add(new Factura() { Codigo = 12, Cliente = new Cliente() { Codigo = 4, Nombre = "4" }, Fecha = DateTime.Now.AddDays(-29), Monto = 1090 });
+            this.facturas.Add(new Factura() { Codigo = 13, Cliente = new Cliente() { Codigo = 3, Nombre = "3" }, Fecha = DateTime.Now.AddDays(-64), Monto = 3980 });
+            this.facturas.Add(new Factura() { Codigo = 14, Cliente = new Cliente() { Codigo = 2, Nombre = "2" }, Fecha = DateTime.Now.AddDays(-184), Monto = 8000 });
         }
 
         /// <summary>
@@ -75,7 +80,7 @@ namespace Logica
         {
             return codigoCliente == 0 ? 
                    this.facturas.Where(x=>x.FechaBaja == DateTime.MinValue).ToList() : //Todas sin las eliminadas
-                   this.facturas.Where(x=> x.FechaBaja == DateTime.MinValue && x.CodigoCliente == codigoCliente).ToList(); //Filtradas sin las eliminadas
+                   this.facturas.Where(x=> x.FechaBaja == DateTime.MinValue && x.Cliente.Codigo == codigoCliente).ToList(); //Filtradas sin las eliminadas
         }
 
         public Factura ObtenerFacturaPorCodigo(int codigo)
